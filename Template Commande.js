@@ -35,7 +35,7 @@ class Tpl extends Command {
 
         const client = this.client;
 
-        console.log(`[Habbui]:${message.author.tag}` + ` Utilisation => ` + `tpl`);
+        console.log(`[Adolite]:${message.author.tag}` + ` Utilisation => ` + `tpl`);
 
         message.channel.send("tnt");
 
