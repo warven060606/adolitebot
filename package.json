@@ -1,5 +1,5 @@
 {
-  "name": "habbui",
+  "name": "Adolite",
   "version": "0.0.1",
   "description": "A template for anyone to create a discord bot.",
   "main": "Luna.js",
@@ -16,7 +16,7 @@
     "command-handler",
     "bot"
   ],
-  "author": "Asgarrrr",
+  "author": "Warven",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Asgarrrr/Luna/issues"
