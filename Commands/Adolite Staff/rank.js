@@ -1,6 +1,6 @@
 /* › Commands / Rank.js ————————————————————————————————————————————————————————
 
-   — Relie son compte discord au Site d'Adolite.online.
+   — Relie son compte discord au Site d'Adolite.fr.
 
      ヽ( •_•)O´¯`°.¸.·´¯`Q(^o^ )`                                              */
 
@@ -35,57 +35,6 @@ class Verify extends Command {
 
     async run(message, args) {
 
-        // —— Database connection
-        const { USER, DB, MDP, HOST } = this.client.config.bdd;
-        var database = mysql.createConnection({ host: HOST, user: USER, password: MDP, database: DB, charset: "utf8mb4", });
-
-        console.log(`[Adolite]:${message.author.tag}` + ` Utilisation => ` + `rank`);
-
-        if (DbConnection()) {
-            message.delete();
-
-            let username = args[0] ? args[0] : "";
-            let rank = args[1] ? args[1] : "1";
-
-
-            database.query("SELECT id FROM users WHERE discord_id = ? AND discord_verify = ? AND rank >= ? LIMIT 1", [message.author.id, "1", "8"], async function (err, result) {
-                if (err) return console.log(err) && Dbdisconnect();
-                if (!result || result.length < 1) return Dbdisconnect() && message.reply('pour utiliser cette commande tu dois être Responsable d\'un pôle Staff !');
-                
-                if (rank < 1 || rank > 9) return Dbdisconnect() && message.channel.send('```diff\n- Une erreur est survenue, reéssayez ultérieurement !```');
-
-                database.query(
-                    'UPDATE users SET rank = ? WHERE username = ?',
-                    [rank, username],
-                    function (err, results) {
-                        if (err) return Dbdisconnect() && message.channel.send('```diff\n- Une erreur est survenue, reéssayez ultérieurement !```');
-                        if(!results || results.affectedRows < 1) return Dbdisconnect() && message.channel.send('```diff\n- Le compte est introuvable !```');
-                        console.log(`[Adolite] Le compte de ${username} a été rank niveau ${rank} !`);
-                        message.channel.send(`Le compte de ${username} a été rank niveau ${rank} !`);
-                        Dbdisconnect();
-                    }
-                );
-            });
-
-        }
-        database.on('error', function () {
-            DbConnection();
-        });
-
-        async function Dbdisconnect() {
-            await database.end(function (err) {
-                if (err) throw err;
-                console.log(`[Adolite]` + ` Base de données => ` + `Hors ligne`);
-            });
-        }
-
-        async function DbConnection() {
-            database.connect(function (err) {
-                console.log(`[Adolite]` + ` Base de données => ` + `En ligne`);
-                return true;
-            });
-        }
-    }
 }
 
 module.exports = Verify;
