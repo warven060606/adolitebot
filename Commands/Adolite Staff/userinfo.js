@@ -21,7 +21,7 @@ class Stats extends Command {
       name: "userinfo",
       description: "Affiche les stastistiques détaillées d'un compte.",
       usage: "{Pseudo || @Pseudo || ID}",
-      exemple: ["Rayan"],
+      exemple: ["Warven"],
       args: true,
       category: "Staff",
       cooldown: 5000,
