@@ -1,13 +1,13 @@
 {
-    "token": "NzQxNjgwOTE3OTMxNjIyNDUw.Xy7GLg.FU6N05CbtvpfMdjTc5J9hiXtx3w",
+    "token": "",
     "Master": "589662899212124163",
     "prefix": "<",
 
     "bdd": {
-        "HOST": "sql01.hebergnity.com",
-        "USER": "NITYDB-20430212",
-        "MDP": "5N8fpEckTQMP05W",
-        "DB": "NITYDB-20430212"
+        "HOST": "",
+        "USER": "",
+        "MDP": "",
+        "BDD": ""
     },
 
     "presence": {
