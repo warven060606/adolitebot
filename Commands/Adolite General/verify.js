@@ -36,25 +36,7 @@ class Verify extends Command {
 
         // —— Database connection
        
-        }
-        database.on('error', function () {
-            DbConnection();
-        });
 
-        async function Dbdisconnect(){
-            await database.end(function(err){
-                if(err) throw err;
-                console.log(`[Adolite]` + ` Base de données => ` + `Hors ligne`);
-            });
-        }
-
-        async function DbConnection() {
-            database.connect(function (err) {
-                console.log(`[Adolite]` + ` Base de données => ` + `En ligne`);
-                return true;
-            });
-        }
-    }
 }
 
 module.exports = Verify;
