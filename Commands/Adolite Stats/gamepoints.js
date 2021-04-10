@@ -1,7 +1,7 @@
 /* › Commands / Gamepoints.js ————————————————————————————————————————————————————————
 
    — Envoie une requête à la base de donnée pour 
-   afficher le top Joueurs en nombre de gamepoints sur Adolite.online.
+   afficher le top Joueurs en nombre de gamepoints sur Adolite.fr
 
      ヽ( •_•)O´¯`°.¸.·´¯`Q(^o^ )`                                              */
 
